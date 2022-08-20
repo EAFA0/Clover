@@ -1,0 +1,39 @@
+@hostname = localhost:8080
+
+## ping
+GET http://{{hostname}}/ping
+
+### openid
+GET http://{{hostname}}/openid
+    ?js_code=
+
+### schedule GET
+GET http://{{hostname}}/schedule/
+
+
+### token
+
+# @name token
+POST https://api.weixin.qq.com/cgi-bin/token
+    ?grant_type=client_credential
+    &appid=
+    &secret=
+
+###
+
+@access_token = {{token.response.body.$.access_token}}
+
+POST https://api.weixin.qq.com/cgi-bin/message/template/send
+    ?access_token={{access_token}}
+Content-Type: application/json
+
+{
+    "touser": "",
+    "template_id": "qov0zOd4gI6v-WRoMiujnlR7DI116wLFK0G_A4qalAE",
+    "url": "http://weixin.qq.com/download",
+    "data": {
+        "Date": {
+            "value": "{{$datetime iso8601}}"
+        }
+    }
+}
