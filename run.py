@@ -1,8 +1,6 @@
 import sys
-from flask import Flask
-
-app = Flask(__name__)
-app.config.from_object('config')
+from clover import app
+from schedule.view import *
 
 # 启动Flask Web服务
 if __name__ == '__main__':
