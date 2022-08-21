@@ -5,7 +5,7 @@ GET http://{{hostname}}/ping
 
 ### openid
 GET http://{{hostname}}/openid
-    ?code=093Gjt000mYfpO1ulh100Tui1E3Gjt0D
+    ?js_code=053Vq01w3g315Z2v523w3sdHsx1Vq01I
 
 ### schedule GET
 GET http://{{hostname}}/schedule/123
