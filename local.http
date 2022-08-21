@@ -3,5 +3,9 @@
 ## ping
 GET http://{{hostname}}/ping
 
+### openid
+GET http://{{hostname}}/openid
+    ?code=093Gjt000mYfpO1ulh100Tui1E3Gjt0D
+
 ### schedule GET
 GET http://{{hostname}}/schedule/123
